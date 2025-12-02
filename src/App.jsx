@@ -28,4 +28,28 @@ export default function App() {
 
       <input
         type="text"
-        placeholder="Search for a w
+        placeholder="Search for a word..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        style={{
+          padding: "6px",
+          width: "200px",
+          marginRight: "10px"
+        }}
+      />
+
+      <button
+        onClick={handleSearch}
+        style={{
+          padding: "6px 12px",
+          cursor: "pointer"
+        }}
+      >
+        Search
+      </button>
+
+      <h3 style={{ marginTop: "20px", fontWeight: "bold" }}>Definition:</h3>
+      <p>{result}</p>
+    </div>
+  );
+}
